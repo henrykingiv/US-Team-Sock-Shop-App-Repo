@@ -4,7 +4,7 @@ pipeline {
     stage ('deploying to stage environment'){
       steps {
         sshagent(['ansible-key']) {
-          sh 'ssh -t -t ubuntu@10.0.2.45 -o StrictHostKeyChecking=no "ansible-playbook /home/ubuntu/playbook/stage.yml"'
+          sh 'ssh -t -t ubuntu@10.0.2.120 -o StrictHostKeyChecking=no "ansible-playbook /home/ubuntu/playbook/stage.yml"'
         }
       }
     }
